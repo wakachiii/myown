@@ -1,10 +1,18 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import { Home } from "./pages"
+
 function App() {
 
   return (
-    <>
-      <h1 className="text-3xl">Hello World</h1>
-
-    </>
+    <main className='bg-slate-300/20'>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </main>
   )
 }
 
